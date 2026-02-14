@@ -11,6 +11,7 @@ export default function Home() {
 			Query.equal("status", "active"),
 			Query.limit(12),
 		]);
+		console.log(posts);
 		if (posts) {
 			setPosts(posts.documents);
 			setLoading(false);
@@ -21,6 +22,7 @@ export default function Home() {
 	};
 
 	useEffect(() => {
+		console.log("fetching posts");
 		fetchPosts();
 	}, []);
 

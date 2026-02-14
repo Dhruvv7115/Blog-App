@@ -69,7 +69,7 @@ class AuthService {
 		try {
 			this.account.createOAuth2Session(
 				OAuthProvider.Google,
-				"http://localhost:5173/dashboard", // Success URL
+				"http://localhost:5173/all-posts", // Success URL
 				"http://localhost:5173/login", // Failure URL
         ["openid", "email", "profile"],
 			);

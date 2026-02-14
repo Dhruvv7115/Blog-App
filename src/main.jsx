@@ -13,7 +13,6 @@ import AllPosts from "./pages/AllPosts.jsx";
 import { Protected } from "./components";
 import AddPost from "./pages/AddPost.jsx";
 import Post from "./pages/Post.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -79,10 +78,6 @@ const router = createBrowserRouter([
 			{
 				path: "/post/:slug",
 				element: <Post />,
-			},
-			{
-				path: "/dashboard",
-				element: <Dashboard />,
 			},
 		],
 	},
