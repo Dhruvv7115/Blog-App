@@ -48,16 +48,16 @@ export default function Post() {
 	};
 
 	return post ? (
-		<div className="px-4 py-8 md:px-8 lg:px-16">
+		<div className="px-4 md:px-8 lg:px-16">
 			<Container>
-				<div className="w-full mx-auto p-4 bg-amber-50 shadow-lg rounded-2xl max-h-7xl flex flex-col items-center justify-center">
-					<h1 className="text-4xl font-bold mb-6">{post.title}</h1>
+				<div className="w-full md:max-w-4xl mx-auto bg-amber-100 flex flex-col items-center justify-center md:px-24 py-6">
 					<img
 						src={blogService.getFileView(post.featuredImage)}
 						alt={post.title}
-						className="w-full max-w-2xl h-auto rounded-md shadow-md mb-4 float-none md:float-left"
+						className="w-full h-96 object-cover rounded-md shadow-md mb-4 float-none md:float-left"
 					/>
-					<div className="browser-css flex flex-col justify-center items-center gap-4">
+					<h1 className="text-4xl font-bold my-6 text-start w-full py-2">{post.title}</h1>
+					<div className="flex flex-col items-stretch justify-stretch text-start w-full prose prose-base max-w-none py-4">
 						{parse(post.content)}
 					</div>
 
